@@ -1,0 +1,74 @@
+{
+  "station_mapping": {
+    "STATION_01": {
+      "name": "Lot Entry Station",
+      "process": "Lot Entry System",
+      "description": "Initial lot entry and registration - First step in production"
+    },
+    "STATION_02": {
+      "name": "Assembly Measurement Station",
+      "process": "Assembly Measurement",
+      "description": "Assembly dimension measurement and verification"
+    },
+    "STATION_03": {
+      "name": "Cable Soldering Station",
+      "process": "Cable Soldering",
+      "description": "Cable wire soldering and orientation check"
+    },
+    "STATION_04": {
+      "name": "Inductance & Resistance Station",
+      "process": "Inductance & Resistance Measurement",
+      "description": "Electrical testing - Inductance and resistance measurement"
+    },
+    "STATION_05": {
+      "name": "Labelling Station",
+      "process": "Labelling",
+      "description": "Product labelling and identification"
+    },
+    "STATION_06": {
+      "name": "MR Chip Alignment Station",
+      "process": "MR Chip Alignment Measurement",
+      "description": "MR chip alignment verification and measurement"
+    },
+    "STATION_07": {
+      "name": "MR Chip Height Station",
+      "process": "MR Chip Height Measurement",
+      "description": "MR chip height measurement and tolerance check"
+    },
+    "STATION_08": {
+      "name": "QA Final Inspection Station",
+      "process": "QA Final Inspection",
+      "description": "Final quality assurance inspection before shipment"
+    },
+    "STATION_09": {
+      "name": "QA Inspection Station",
+      "process": "QA Inspection 1 & 2",
+      "description": "Quality inspection checkpoints 1 & 2"
+    },
+    "STATION_10": {
+      "name": "Resistance Measurement Station",
+      "process": "SBB & Cable Resistance",
+      "description": "SBB and cable resistance testing"
+    },
+    "STATION_11": {
+      "name": "Sensor Sealing Station",
+      "process": "Sensor Sealing",
+      "description": "Sensor sealing process"
+    },
+    "STATION_12": {
+      "name": "Sensor Storage Station",
+      "process": "Sensor Storage",
+      "description": "Sensor inventory management and storage"
+    },
+    "STATION_13": {
+      "name": "Shipment Station",
+      "process": "Shipment Creation",
+      "description": "Shipment preparation and dispatch - Final step"
+    },
+    "STATION_14": {
+      "name": "Molding Dimension Station",
+      "process": "Top & Bottom Molding Dimension",
+      "description": "Top and bottom molding dimension verification"
+    }
+  }
+}

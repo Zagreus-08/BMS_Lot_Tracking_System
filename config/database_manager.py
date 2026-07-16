@@ -216,6 +216,59 @@ class DatabaseManager:
             print(f"Error fetching lot details: {e}")
             return None
     
+    def get_lot_info(self, lot_number: str) -> Optional[Dict]:
+        """Get basic lot information to verify if lot exists"""
+        try:
+            # First check tracking database
+            conn = self.get_connection(self.lot_tracking_db)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT lot_number, sensor_id, current_process 
+                FROM lot_tracking 
+                WHERE lot_number=? 
+                LIMIT 1
+            """, (lot_number,))
+            
+            row = cursor.fetchone()
+            conn.close()
+            
+            if row:
+                return {
+                    'lot_number': row[0],
+                    'sensor_id': row[1],
+                    'current_process': row[2],
+                    'exists': True
+                }
+            
+            # If not in tracking, check masterlist
+            conn = self.get_connection(self.lot_masterlist_db)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT lot_number 
+                FROM lot_masterlist 
+                WHERE lot_number=? 
+                LIMIT 1
+            """, (lot_number,))
+            
+            row = cursor.fetchone()
+            conn.close()
+            
+            if row:
+                return {
+                    'lot_number': row[0],
+                    'sensor_id': None,
+                    'current_process': None,
+                    'exists': True
+                }
+            
+            return None
+        
+        except Exception as e:
+            print(f"Error fetching lot info: {e}")
+            return None
+    
     def get_recent_activity(self, limit: int = 20) -> List[Dict]:
         """Get recent lot processing activity"""
         try:
