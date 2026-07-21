@@ -123,6 +123,8 @@ ADMIN_PROGRAMS = {
     
     "Lot Package System": os.path.join(ADMIN_PROGRAMS_DIR, "BMS_Lot_Package_System.py"),
     
+    "Material Request Sheet": os.path.join(ADMIN_PROGRAMS_DIR, "Material_Request_Sheet.py"),
+    
     "Manual Parameter Encode": os.path.join(ADMIN_PROGRAMS_DIR, "Manual Parameter Encode.py"),
     
     "LTS Inquiry System": os.path.join(ADMIN_PROGRAMS_DIR, "v3_BMS_LTS_Inquiry_System copy.py"),
